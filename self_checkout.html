@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self Checkout</title>
+  <link rel="stylesheet" href="self checkout.css">
+</head>
+<body id="billing-system">
+  <header>
+    <h1>Self Checkout System</h1>
+  </header>
+  <!-- self-checkout Section -->
+    <section id="self-checkout">
+        <div class="container">
+            <h2>Why Choose Sifa Distribution Limited?</h2>
+            <ul class="benefits-list">
+                <li>Reliable and timely delivery services.</li>
+                <li>Comprehensive distribution solutions tailored to your needs.</li>
+                <li>Experienced team dedicated to customer satisfaction.</li>
+                <li>State-of-the-art logistics and inventory management systems.</li>
+                <li>Competitive pricing with no compromise on quality.</li>
+            </ul>
+        
+            
+        </div>
+    </section>
+
+  <!-- Cart View -->
+  <section id="cart-view">
+    <label for="product-code">Enter or Scan Product Code:</label>
+    <input type="text" id="product-code" placeholder="e.g. 101">
+    <div id="product-code-feedback" class="feedback"></div>
+    <button id="add-to-cart">Add to Cart</button>
+    
+    <div id="cart-items"></div>
+    <p id="empty-cart-message">Cart is empty</p>
+
+    <div id="cart-summary">
+      <p>Subtotal: <span id="cart-subtotal">0.00ksh</span></p>
+      <p>Discount: <span id="cart-discount">0.00ksh</span></p>
+      <p>Tax: <span id="cart-tax">0.00ksh</span></p>
+      <p><strong>Total: <span id="cart-total">0.00ksh</span></strong></p>
+    </div>
+    <button id="finalize-sale" disabled>Finalize Sale</button>
+  </section>
+
+  <!-- Receipt View -->
+  <section id="receipt-view" style="display: none;">
+    <div id="receipt-container">
+      <h2>Receipt</h2>
+      <p>Date: <span id="receipt-date"></span></p>
+      <p>Transaction ID: <span id="receipt-transaction-id"></span></p>
+      <div id="receipt-items"></div>
+      <div class="receipt-summary">
+        <p>Subtotal: <span id="receipt-subtotal">0.00ksh</span></p>
+        <p>Discount: <span id="receipt-discount">0.00ksh</span></p>
+        <p>Tax: <span id="receipt-tax">0.00ksh</span></p>
+        <p><strong>Total: <span id="receipt-total">0.00ksh</span></strong></p>
+      </div>
+    </div>
+    <button id="print-receipt">🖨 Print Receipt</button>
+    <button id="start-over">🔄 Start Over</button>
+  </section>
+  <!-- ADMIN PANEL (Programmer use only) -->
+<section id="admin-panel">
+  <h2>Admin: Manage Products</h2>
+  <form id="admin-form">
+    <input type="text" id="admin-code" placeholder="Product Code" required>
+    <input type="text" id="admin-name" placeholder="Product Name" required>
+    <input type="number" id="admin-price" placeholder="Price" step="0.01" required>
+    <button type="submit">Add Product</button>
+  </form>
+
+  <h3>Available Products</h3>
+  <ul id="admin-products"></ul>
+</section>
+
+  <script src="self checkout.js"></script>
+</body>
+</html>

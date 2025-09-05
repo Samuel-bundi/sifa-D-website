@@ -1,0 +1,42 @@
+#billing-system {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.feedback {
+  color: red;
+  display: none;
+}
+
+.cart-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+}
+
+.qty-control button {
+  margin: 0 5px;
+}
+
+#cart-summary {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.receipt-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+.is-invalid {
+  border: 2px solid red;
+}
