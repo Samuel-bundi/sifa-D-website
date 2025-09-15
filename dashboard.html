@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sifa Distribution Portal</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <header>
+    <h1>📦 Sifa Distribution Portal</h1>
+    <p>Welcome to your interactive dashboard</p>
+  </header>
+
+  <!-- Part 1: Event Handling -->
+  <section>
+    <h2> Notifications</h2>
+    <button id="notifyBtn">Check New Updates</button>
+    <p id="notifyMsg" class="hidden">✅ No pending deliveries at the moment.</p>
+  </section>
+
+  <!-- Part 2: Interactive Elements -->
+  <section>
+    <h2> Dashboard Appearance</h2>
+    <button id="toggleMode">Toggle Light/Dark Mode</button>
+  </section>
+
+  <section>
+    <h2> Stock Counter</h2>
+    <button id="increaseStock">+ Add Stock</button>
+    <button id="decreaseStock">- Reduce Stock</button>
+    <p>Current Stock Level: <span id="stockCount">0</span></p>
+  </section>
+
+  <section>
+    <h2> FAQ (Company Info)</h2>
+    <button class="faq-toggle">What does Sifa Distribution do?</button>
+    <p class="faq hidden">We supply wholesale and retail goods to businesses and individuals efficiently and affordably.</p>
+  </section>
+
+  <!-- Part 3: Form Validation -->
+  <section>
+    <h2> Client Registration Form</h2>
+    <form id="clientForm">
+      <label>
+        Full Name:
+        <input type="text" id="clientName" required>
+      </label>
+      <small class="error" id="nameError"></small>
+
+      <label>
+        Email:
+        <input type="text" id="clientEmail" required>
+      </label>
+      <small class="error" id="emailError"></small>
+
+      <label>
+        Password:
+        <input type="password" id="clientPassword" required>
+      </label>
+      <small class="error" id="passwordError"></small>
+
+      <button type="submit">Register</button>
+    </form>
+    <p id="formSuccess" class="success hidden">✅ Registration successful! Welcome to Sifa Distribution.</p>
+  </section>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
